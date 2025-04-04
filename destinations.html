@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase - Explore the World</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: url('travel-banner.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff6200;
+        }
+        
+        .btn {
+            background: #ff6200;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #cc5000;
+        }
+        
+        .destination {
+            text-align: center;
+            padding: 50px;
+        }
+        
+        h2 {
+            color: #AA60C8;
+        }
+        
+        .destination-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .destination-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        
+        .destination-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .destination-card h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section id="destinations" class="destination">
+        <h2>Popular Destinations</h2>
+        <div class="destination-container">
+            <div class="destination-card">
+                <img src="C:\Users\Admin\OneDrive\Documents\OneDrive\Desktop\travel\kodaikanal.jpeg" alt="Kodaikanal">
+                <h3>Kodaikanal</h3>
+                <p> Kodaikanal is situated on the southern pinnacle of the upper Palani Hills near Madurai in TamilNadu. Surrounded with rocks, woods, serene lakes and soothing air to embrace, Kodaikanal is the desired destination for tourists across the
+                    globe.
+                </p>
+                <button class="btn" onclick="bookDestination('Kodaikanal')">Book Now</button>
+            </div>
+            <div class="destination-card">
+                <img src="C:\Users\Admin\OneDrive\Documents\OneDrive\Desktop\travel\ooty.jpeg" alt="Ooty">
+                <h3>Ooty</h3>
+                <p>Officially called Ootacamund, the hill-town is better known by its nickname–Ooty. It is loved by Bollywood directors, honeymooners, families, and even backpackers, for its mountains, lakes, gardens, and waterfalls.</p>
+                <button class="btn" onclick="bookDestination('Ooty')">Book Now</button>
+            </div>
+            <div class="destination-card">
+                <img src="C:\Users\Admin\OneDrive\Documents\OneDrive\Desktop\travel\Auroville.jpg" alt="Auroville">
+                <h3>Auroville</h3>
+                <p>Auroville is located in Tamil Nadu and was founded in 1968 by Mirra Alfassa, a disciple of Aurobindo and fondly known as the 'Mother' of Sri Aurobindo Society.</p>
+                <button class="btn" onclick="bookDestination('Auroville')">Book Now</button>
+            </div>
+            <div class="destination-card">
+                <img src="C:\Users\Admin\OneDrive\Documents\OneDrive\Desktop\travel\yelagiri.jpg" alt="Yelagiri">
+                <h3>Yelagiri</h3>
+                <p>Located in the Vellore district of Tamil Nadu and at 1,110 metres above sea level, Yelagiri is a picturesque hill station with rose gardens, lush green orchards and deep valleys.</p>
+                <button class="btn" onclick="bookDestination('Yelagiri')">Book Now</button>
+            </div>
+            <div class="destination-card">
+                <img src="C:\Users\Admin\OneDrive\Documents\OneDrive\Desktop\travel\vydehi_falls.jpg" alt="Vydehi Falls">
+                <h3>Vydehi Falls</h3>
+                <p>The falls has pulled towards itself a large number of visitors because of its scenic attraction and beauty.</p>
+                <button class="btn" onclick="bookDestination('Vydehi Falls')">Book Now</button>
+            </div>
+            <div class="destination-card">
+                <img src="C:\Users\Admin\OneDrive\Documents\OneDrive\Desktop\travel\parambikulam.jpeg" alt="Parambikulam">
+                <h3>Parambikulam Wildlife Sanctuary</h3>
+                <p>The place serves as a safe abode for numerous endangered species as well as a popular tiger reserve. From vibrant butterflies, Nilgiri Wood Pigeon, and Woodpeckers to about 47 species of fish, there is a lot to discover on your Parambikulam
+                    excursion.
+                </p>
+                <button class="btn" onclick="bookDestination('Parambikulam Wildlife Sanctuary')">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function bookNow() {
+            alert("Redirecting to booking page...");
+            window.location.href = "booking.html";
+        }
+
+        function bookDestination(destination) {
+            sessionStorage.setItem("selectedDestination", destination);
+            window.location.href = "booking.html";
+        }
+    </script>
+</body>
+
+</html>

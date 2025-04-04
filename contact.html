@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        
+        .container {
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+        
+        input,
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .btn {
+            background: #ff6200;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #cc5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have any questions? Reach out to us!</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <input type="email" id="email" placeholder="Your Email" required><br>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea><br>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your message has been sent successfully!");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+</body>
+
+</html>
